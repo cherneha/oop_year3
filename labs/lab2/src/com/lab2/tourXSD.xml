@@ -1,0 +1,102 @@
+<?xml version="1.1" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:simpleType name="tourType" final="restriction">
+		<xs:restriction base = "xs:normalizedString">
+			<xs:enumeration value="Weekend"/>
+			<xs:enumeration value="Sightseeing"/>
+			<xs:enumeration value="Resort"/>
+			<xs:enumeration value="Pilgrimage"/>
+			<xs:enumeration value="Skiing"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="transportationType">
+		<xs:restriction base="xs:normalizedString">
+			<xs:enumeration value="avia"/>
+			<xs:enumeration value="train"/>
+			<xs:enumeration value="bus"/>
+			<xs:enumeration value="liner"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="boardType">
+		<xs:restriction base="xs:normalizedString">
+			<xs:enumeration value="HB"/>
+			<xs:enumeration value="AI"/>
+			<xs:enumeration value="BB"/>
+			<xs:enumeration value="RO"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="suitType">
+		<xs:restriction base="xs:normalizedString">
+			<xs:enumeration value="Double"/>
+			<xs:enumeration value="Single"/>
+			<xs:enumeration value="Triple"/>
+			<xs:enumeration value="Apartment"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+<xs:element name="all_tourist_vouchers">
+	<xs:complexType>
+		<xs:sequence>
+		<xs:element name="tourist_voucher" maxOccurs="unbounded">
+			<xs:complexType>
+					<xs:sequence>
+						<xs:element name="type" type="tourType"/>
+						<xs:element name="country"  type="xs:string"/>
+						<xs:element name="days_nights">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:pattern value="[0-2][0-9][/][0-2][0-9]"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="transport" type="transportationType"/>
+						<xs:element name="hotel_characteristics">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="stars">
+										<xs:simpleType>
+											<xs:restriction base="xs:integer">
+												<xs:minInclusive value="2"/>
+												<xs:maxInclusive value="5"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:element>
+									<xs:element name="ration" type="boardType"/>
+									<xs:element name="suit_type" type="suitType"/>
+									<xs:element name="TV">
+										<xs:simpleType>
+											<xs:restriction base="xs:int">
+												<xs:minInclusive value="0"/>
+												<xs:maxInclusive value="10"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:element>
+									<xs:element name="conditioneer">
+										<xs:simpleType>
+											<xs:restriction base="xs:int">
+												<xs:minInclusive value="0"/>
+												<xs:maxInclusive value="5"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="price">
+							<xs:simpleType>
+								<xs:restriction base="xs:decimal">
+									<xs:minInclusive value="1"/>
+									<xs:maxInclusive value="1000000"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+					</xs:sequence>
+				  <xs:attribute name="id" type="xs:ID" use = "required"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+</xs:schema>
+
+

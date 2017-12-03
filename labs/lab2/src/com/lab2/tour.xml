@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<all_tourist_vouchers>
+	<tourist_voucher id="a12">
+		<type>Weekend</type>
+		<country>Italy</country>
+		<days_nights>04/03</days_nights>
+		<transport>avia</transport>
+		<hotel_characteristics>
+			<stars>4</stars>
+			<ration>BB</ration>
+			<suit_type>Double</suit_type>
+			<TV>1</TV>
+			<conditioneer>1</conditioneer>
+		</hotel_characteristics>
+		<price>230</price>
+	</tourist_voucher>
+	<tourist_voucher id="a1">
+		<type>Sightseeing</type>
+		<country>USA</country>
+		<days_nights>14/13</days_nights>
+		<transport>avia</transport>
+		<hotel_characteristics>
+			<stars>3</stars>
+			<ration>BB</ration>
+			<suit_type>Double</suit_type>
+			<TV>1</TV>
+			<conditioneer>1</conditioneer>
+		</hotel_characteristics>
+		<price>1830</price>
+	</tourist_voucher>
+	<tourist_voucher id="a2">
+		<type>Resort</type>
+		<country>Bulgaria</country>
+		<days_nights>12/11</days_nights>
+		<transport>bus</transport>
+		<hotel_characteristics>
+			<stars>4</stars>
+			<ration>AI</ration>
+			<suit_type>Double</suit_type>
+			<TV>0</TV>
+			<conditioneer>1</conditioneer>
+		</hotel_characteristics>
+		<price>400</price>
+	</tourist_voucher>
+</all_tourist_vouchers>

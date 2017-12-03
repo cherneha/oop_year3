@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tourist_voucher>
+	<type>Weekend</type>
+	<country>Italy</country>
+	<days_nights>4/3</days_nights>
+	<transport>avia</transport>
+	<hotel_characteristics>
+		<stars>4</stars>
+		<ration>BB</ration>
+		<suit_type>Double</suit_type>
+		<TV>1</TV>
+		<conditioneer>1</conditioneer>
+	</hotel_characteristics>
+	<price>230</price>
+</tourist_voucher>
