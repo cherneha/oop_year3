@@ -1,6 +1,9 @@
 Camel ActiveMQ Project
 ======================
 
+Задание:
+5. Используя JMS создать игру крестики –нолики (играют двое). Использовать ActiveMQ(или OpenMQ)
+
 This project embeds Apache ActiveMQ together with Apache Camel.
 
 To build this project use
